@@ -224,3 +224,19 @@ window.addEventListener('click', event => {
 window.addEventListener('mousemove', event => {
     circle (event.clientX, event.clientY, 7, 'red', false);
 });
+
+/**
+ * Print some text in canvas
+ * 
+ * CANVAS_CONTEXT.font = 'font-size font-family' - указываем размер шрифта и семейство и другие параметры настройки шрифта
+ * CANVAS_CONTEXT.fillStyle = 'color' - цвет текста
+ * CANVAS_CONTEXT.textAlign = 'left, right, top, bottom' - горизонтальное выравнивание еткста относительно точки вывода на канвасе
+ * CANVAS_CONTEXT.textBaseline = 'top, bottom, middle' - вертикальное выравниваие текста относительно точки вывода на канвасе
+ * CANVAS_CONTEXT.fillText('выводимый текст', X, Y); - точка вывода текста на канвасе, где X и Y координаты вывода
+ * 
+ */
+ctx.font = 'italic bold 50px Arial';
+ctx.fillStyle = 'blue';
+ctx.textAlign = 'left';
+ctx.textBaseline = 'top';
+ctx.fillText('Hello world!', canvas.width / 2, canvas.height / 2);
